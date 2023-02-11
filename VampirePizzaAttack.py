@@ -60,18 +60,18 @@ background_surf = Surface.convert(background_img)
 BACKGROUND = transform.scale(background_surf, (WINDOW_RES))
 
 # tile trap images
-garlic_img = image.load('garlic.jpg')
-garlic_surf = Surface.convert(garlic_img)
+garlic_img = image.load('garlic.png')
+garlic_surf = Surface.convert_alpha(garlic_img)
 GARLIC = transform.scale(garlic_surf, (WIDTH, HEIGHT))
-GARLIC.set_alpha(127)
+#GARLIC.set_alpha(127)
 cutter_img = image.load('pizzacutter.png')
-cutter_surf = Surface.convert(cutter_img)
+cutter_surf = Surface.convert_alpha(cutter_img)
 CUTTER = transform.scale(cutter_surf, (WIDTH, HEIGHT))
-CUTTER.set_alpha(127)
-pepperoni_img = image.load('pepperoni.jpg')
-pepperoni_surf = Surface.convert(pepperoni_img)
+#CUTTER.set_alpha(127)
+pepperoni_img = image.load('pepperoni.png')
+pepperoni_surf = Surface.convert_alpha(pepperoni_img)
 PEPPERONI = transform.scale(pepperoni_surf, (WIDTH, HEIGHT))
-PEPPERONI.set_alpha(127)
+#PEPPERONI.set_alpha(127)
 
 #---------------------------------------------
 #Set up classes
@@ -282,8 +282,8 @@ running = True
 exited = True
 while running: 
 
-#------------------------------------------
-#Check for events
+    #------------------------------------------
+    #Check for events
 
     #checking for and handling events
     for event in pygame.event.get():
