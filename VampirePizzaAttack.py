@@ -51,7 +51,7 @@ display.set_caption('Attack of the Vampire Pizzas!')
 
 #set up enemy imgage
 pizza_img = image.load('vampire.png')
-pizza_surf = Surface.convert(pizza_img)
+pizza_surf = Surface.convert_alpha(pizza_img)
 VAMPIRE_PIZZA = transform.scale(pizza_surf, (100, 100))
 
 #set up background image
